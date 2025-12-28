@@ -1,4 +1,4 @@
-import mongoose from "mongoose#";
+import mongoose from "mongoose";
 
 const ticketSchema = new mongoose.Schema(
     // Definición de los campos del esquema y sus validaciones
