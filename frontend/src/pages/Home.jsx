@@ -92,7 +92,6 @@ export default function Home() {
                 }`}
                 value={form.titulo}
                 onChange={(e) => setForm({ ...form, titulo: e.target.value })}
-                required
               />
               {errores.titulo && (
                 <p className="text-red-500 text-sm mt-1">{errores.titulo}</p>
@@ -114,7 +113,6 @@ export default function Home() {
               onChange={(e) =>
                 setForm({ ...form, descripcion: e.target.value })
               }
-              required
             />
             {errores.descripcion && (
               <p className="text-red-500 text-sm mt-1">{errores.descripcion}</p>
@@ -134,7 +132,6 @@ export default function Home() {
               onChange={(e) =>
                 setForm({ ...form, responsable: e.target.value })
               }
-              required
             />
             {errores.responsable && (
               <p className="text-red-500 text-sm mt-1">{errores.responsable}</p>
