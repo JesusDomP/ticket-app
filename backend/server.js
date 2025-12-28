@@ -12,7 +12,11 @@ conectarDB();
 const app = express();
 
 // Middlewares 
-app.use(cors());
+app.use(cors({
+  origin: "http://localhost:5173", // Conexión con el frontend
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type"],
+}));
 app.use(express.json());
 
 // Rutas
