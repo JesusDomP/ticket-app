@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
-import TicketCard from "../components/TicketCard";
+import Ticket from "../components/Ticket";
 
 export default function Home() {
   const [tickets, setTickets] = useState([]);
@@ -67,7 +67,7 @@ export default function Home() {
 
       <div className="space-y-4">
         {tickets.map((ticket) => (
-          <TicketCard
+          <Ticket
             key={ticket._id}
             ticket={ticket}
             onUpdate={updateTicket}
