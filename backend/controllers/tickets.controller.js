@@ -6,11 +6,15 @@ export const obtenerTicket = async (req, res) => {
     res.json(tickets);
 };
 
-//Crear un nuevo ticket
+// Crear un nuevo ticket
 export const crearTicket = async (req, res) => {
+  try {
     const ticket = new Ticket(req.body);
     const guardado = await ticket.save();
-    res.status(201).jsaon(guardado);
+    res.status(201).json(guardado);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
 };
 
 //Actualizar el ticket
