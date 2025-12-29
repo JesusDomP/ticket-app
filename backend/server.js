@@ -13,7 +13,7 @@ const app = express();
 
 // Middlewares 
 app.use(cors({
-  origin: "http://localhost:5173", // Conexión con el frontend
+  origin: "*",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type"],
 }));
